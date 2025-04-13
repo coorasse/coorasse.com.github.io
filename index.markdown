@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Alessandro Rodi Blog
 list_title: Last posts
 ---
 
@@ -11,6 +10,6 @@ list_title: Last posts
 
 I' keep this website as simple as possible, with the goal of collecting content in a Git Repository as future reference.
 
-I went through both medium.com and dev.to and finally decided to host the blog myself using Jekyll, PicoCSS and Github Pages.
+I went through both medium.com and dev.to and finally decided to host the blog myself using Jekyll, SimpleCSS and Github Pages.
 
 If you like reading what I write, I guess the RSS Feed should do somehow.
