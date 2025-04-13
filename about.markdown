@@ -1,18 +1,16 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+My name is Alessandro Rodi. 
+I work mostly as a Software Engineer at [Renuo](https://renuo.ch), where I am a co-owner.
+As a side task, I also manage the company in a team of three.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am a Ruby on Rails Engineer since 2010. You might spot me around at Ruby conferences, if so, come and say "hi". 
+I am always happy to meet new people and Rails Engineers.  
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I live in Switzerland 🇨🇭, just outside Zürich, together with Martina, Lorenzo and Pietro.
 
-
-[jekyll-organization]: https://github.com/jekyll
+![about.png](/assets/about.png)
