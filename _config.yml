@@ -29,7 +29,7 @@ github_username:  coorasse
 linkedin_username:  coorasse
 
 # Build settings
-theme: minima
+theme: jekyll-simplecss
 plugins:
   - jekyll-feed
 
@@ -42,7 +42,8 @@ show_excerpts: true
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - .idea
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
