@@ -29,7 +29,7 @@ github_username:  coorasse
 linkedin_username:  coorasse
 
 # Build settings
-theme: jekyll-simplecss
+remote_theme: https://github.com/coorasse/jekyll-simplecss
 plugins:
   - jekyll-feed
 
