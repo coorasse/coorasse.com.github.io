@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Rubyday 2023 - A great comeback!"
+date: 2023-06-17 13:03:00 +0100
+categories: rails
+excerpt: "Read my summary of RubyDay 2023."
+---
+
+The [**Rubyday 2023**](https://2023.rubyday.it/) has just concluded, and it was as amazing as I remembered it from 2019. Yes, sure, we had 2020 and 2021 online editions, but they don't really count to me.
+The conferences are grand, especially for everything that happens between the official talks.
+And Rubyday has something even more special: it may be the wonderful location, Verona, or perhaps it's the fact that you hear so many people speaking Italian, which gives a stronger sense of community and a desire to meet, or perhaps it's the small size, which allows you to approach so many people and spend many informal moments together.
+
+The organizers have succeeded in a very difficult feat: organizing a conference with a **new flavor**, with many different insights, a great mix of technical and non-technical talks, speakers with various backgrounds from all over the world, but also, and above all, many who live and work in Italy, thus contributing to making this event unique and special.
+
+The **ruby community** once again proves to be very close-knit, and I can't wait to see many people again, and meet new ones, at the numerous conferences we will have in Europe this year.
+I go home with so many inputs and ideas to work on in the coming months.
+Let's see which ones:
+
+**Paolo Perrotta** explained to us how chatGPT works. Paolo has an innate ability to explain complex technologies in simple words. There couldn't have been a better keynote in my opinion: Welcome to Rubyday! An Italian rubyist will explain the secrets behind one of the most fascinating technologies of recent years, and it doesn't matter if it's not strictly related to ruby, because the insights for our work are immense. As developers, how will we be able to take full advantage of this technology in the coming years? Will Cucumber become relevant again? Or will we just end up writing tickets on Jira? The topic was so interesting that the discussion continued even after dinner.
+
+Right after, here's a talk strictly related to ruby: **Alessandro Rizzo** showed us how to implement custom cops in rubocop and how [Treatwell](https://www.treatwell.it/) approaches the problem at the company level. Personally, it was really interesting to see that other companies, besides ours, [Renuo](https://www.renuo.ch/), follow the same approach. Treatwell has released rubocop-treatwell, while Renuo uses renuocop. Each company creates its own set of rules to "maximize the happiness" of its developers.
+
+And this connects to **Bozhidar Batsov**'s talk, who with his sharp humor, made a beautiful journey through the latest versions of ruby and the many, new, features that have been released in the last four years, since 2019, which was the last Rubyday he spoke at.
+A talk with many personal perspectives and quite philosophical, that tries to understand and reason around the motto of ruby: a programming language optimized for programmer happiness. Ruby has a really varied syntax, and that's why each work group has the opportunity, thanks to Rubocop, to configure the rules to its own liking.
+A heartfelt thanks to Bug, who spends much of his time receiving insults on github 😀
+
+And then another non-technical but highly effective talk, on how to handle one-on-one, **Giulia Mialich**, Engineering Manager at Nebulab, had a brilliant idea: to bring the point of view of a manager, to an audience predominantly of developers, on why one-on-one are organized in the company, why they are so important, and why they are completely in favor of the employees. The fact that a company does one-on-one should be considered a benefit. It's the most effective tool in the company to grow in your role, and an opportunity to have help and guidance in that sense. Take home message: **being a manager means being a servant**.
+
+The next talk is from **Frederick Cheung**, who courageously brought many slides with Typescript code to a Rubyist audience 😂
+This says a lot about the confidence you must have on stage to do something like that! 😆
+We learned, if we didn't already know, JSON Schema and how to use it to reduce the possibility of errors when implementing our APIs and communicating with them from our frontend. JSON Schema can be used to test and validate what is returned from our Ruby-written APIs, but at the same time allows us to automatically generate Type Definitions in Typescript. In this way, if our APIs change, we will have errors already at compile-time on our frontend. 🤯
+I can't wait to use this strategy in the future to have even more stable APIs and even safer integration with the frontend.
+
+A brief lightning talk from **Sergey Sergyenko** to invite us to Euruko 2023 and then another technical talk from **Ju Liu**. His talks are always very fun and he's one of the few I know who still has the courage to do live-coding at a conference. His talk made us think and remember that the functional approach to programming exists and is often a much more elegant and readable solution than the imperative approach.
+Take home message: **functional programming is about structure transformation**. When you program in a functional way, you have to think in terms of "how do I need to transform my data structure in order to achieve my goal?".
+Thank you Ju!
+
+And if the conference was not technical enough until now, here's another interesting talk from **Ridhwana Khan** on the caching techniques adopted by dev.to, the same platform on which you are reading this article. Did this article load instantly? Well, it's largely thanks to the work done by Ridhwana and other developers at dev.to. The techniques they use are truly cutting-edge and it's wonderful to see the myth that Rails=slow debunked once again. I love having insights on globally reaching software with millions of users. It's really interesting to see how the challenges I face every day can have a much wider scale and how Rails offers all the tools to do it. It's also very interesting to have small sneak peaks from the Network Inspector to understand how Response Headers are used to manage the cache at the browser level.
+
+And to conclude, **Hana Harencarova**, with her talk, finally gave many useful tips on how to onboard Junior figures within a company, what our role as senior developers and CTOs is. It was wonderful to see how this talk met the needs of many companies present at the conference, looking for Ruby On Rails developers. I heard more than one person leave saying "maybe we could revise that job offer for Senior Developer, and open up to the possibility of Junior figures". With the advice that Hana gave us during this talk, hiring Juniors is no longer so scary, and also has the advantage of allowing our community to grow further.
+
+Finally, grazie a Monica Giambitto, who it was really nice to see again after so many years and to the entire [Grusp](https://www.grusp.org/en/) staff 👏. Thanks also to [Renuo](https://www.renuo.ch/) for giving me the opportunity to attend.
+
+See you at the next conference!
