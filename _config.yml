@@ -28,6 +28,8 @@ twitter_username: coorasse
 github_username:  coorasse
 linkedin_username:  coorasse
 
+permalink: /blog/:title/
+
 # Build settings
 remote_theme: https://github.com/coorasse/jekyll-simplecss
 plugins:
