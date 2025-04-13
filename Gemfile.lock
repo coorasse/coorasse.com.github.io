@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coorasse/jekyll-simplecss.git
-  revision: 2d40db965886e510f998bbf5281039c4b2e8273a
+  revision: 680d16a6118e687f70dfcb9e19882411bdb0beb1
   specs:
     jekyll-simplecss (3.0.0.dev)
       jekyll (>= 3.5, < 5.0)
