@@ -77,7 +77,7 @@ or use `.becomes` only when we need it:
 
 but with both these approaches it means we have to change it everywhere.
 
-The last possible approach is to override the method `model_name`
+The last possible approach is to override the method `model_name`.
 
 ```ruby
 
