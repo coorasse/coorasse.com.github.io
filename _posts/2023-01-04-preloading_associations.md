@@ -34,7 +34,7 @@ end
 
 This is the partial that renders our restaurants:
 
-```html
+```erb
 <% @restaurants.each do |restaurant| %>
   <div class="card">
     <h5><%= restaurant.name %></h5>
@@ -101,7 +101,7 @@ We can now do the following:
 
 and render our view like this:
 
-```html
+```erb
 <% @restaurants.each do |restaurant| %>
   <article>
     <h2><%= restaurant.name %></h2>
