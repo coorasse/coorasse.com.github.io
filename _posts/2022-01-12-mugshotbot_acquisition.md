@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mugshot Bot Acquisition: our side of the story"
-date: 2022-01-12 13:56:00 +0100
+date: 2022-01-12
 categories: rails
 excerpt: "How we bought mugshotbot.com"
 ---

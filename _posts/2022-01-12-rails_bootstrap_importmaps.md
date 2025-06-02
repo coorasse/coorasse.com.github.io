@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby On Rails: Bootstrap 5 and importmaps without nodejs"
-date: 2022-01-12 21:01:00 +0100
+date: 2022-01-12
 categories: rails
 excerpt: "How can you integrate Bootstrap in a Rails application without NodeJS"
 ---

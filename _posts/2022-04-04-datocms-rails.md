@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DatoCMS with Ruby on Rails"
-date: 2022-04-04 21:42:00 +0100
+date: 2022-04-04
 categories: rails
 excerpt: "How to integrate DatoCMS in your Ruby On Rails application."
 ---

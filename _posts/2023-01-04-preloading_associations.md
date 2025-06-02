@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Preloading associations on an Array of Objects"
-date: 2023-01-04 15:43:00 +0100
+date: 2023-01-04
 categories: rails
 excerpt: "It might happen that your initial array of objects is not an ActiveRecord Relation. You cannot use preload on an array of objects and therefore you suffer of N+1 queries. Here is the solution."
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Turbo Showcase 🚀"
-date: 2021-03-08 09:46:00 +0100
+date: 2021-03-08
 categories: rails
 excerpt: "If you are getting lost in Turbo documentation. Have a look at this showcase!"
 ---

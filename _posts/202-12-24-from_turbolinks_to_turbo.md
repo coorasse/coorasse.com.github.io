@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Turbolinks to Turbo"
-date: 2020-12-24 18:32:00 +0100
+date: 2020-12-24
 categories: rails
 excerpt: "I was eager to start using Hotwire in a project that I thought was a perfect fit. Here I will show you what I had to do, to migrate from Turbolinks to Turbo, and keep using Webpacker as main assets bundler."
 ---
