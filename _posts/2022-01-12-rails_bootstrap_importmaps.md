@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Rails 7, Bootstrap 5 and importmaps without nodejs"
+title: "Ruby On Rails: Bootstrap 5 and importmaps without nodejs"
 date: 2022-01-12 21:01:00 +0100
 categories: rails
-excerpt: "How can you integrate Bootstrap in a Rails 7 application without NodeJS"
+excerpt: "How can you integrate Bootstrap in a Rails application without NodeJS"
 ---
 
 ## Our goal: remove nodejs
@@ -22,7 +22,7 @@ Bootstrap is made of two parts: CSS and javascript. So I want to use importmaps 
 
 ## Rails default
 
-By default, Rails 7 provides a new option `--css=bootstrap`,
+By default, Rails provides an option `--css=bootstrap`,
 but with my great surprise, this option adds both `jsbundling-rails`, `cssbundling-rails`, a `package.json` and `esbuild`.
 
 **Not as expected. Not what I want.**
@@ -32,9 +32,11 @@ but with my great surprise, this option adds both `jsbundling-rails`, `cssbundli
 Default is not what I want, but I can still reach the goal and here I'll explain how:
 
 **Stick with just `rails new myapp`**
-This will setup exactly the tools I want: `sprockets` and `importmaps`. It will also setup automatically for me stimulus and turbo, which is great because I use them most of the time anyway.
+This will setup exactly the tools I want: `sprockets` and `importmaps`. 
+It will also setup automatically for me stimulus and turbo, which is great because I use them most of the time anyway.
 
-**Add `bootstrap` gem** and enable the gem `sassc-rails` in the Gemfile. This will allow us to compile bootstrap from SCSS without node.
+**Add `bootstrap` gem** and the gem `dartsass-sprockets` in the Gemfile. 
+This will allow us to compile bootstrap from SCSS without node.
 
 You can simply import Bootstrap styles in `app/assets/stylesheets/application.scss`:
 
@@ -71,6 +73,6 @@ I prefer this approach rather than pinning a CDN because we avoid diverging vers
 
 ## Conclusion
 
-This is all you need to have Bootstrap fully working on Rails 7 without using node.
+This is all you need to have Bootstrap fully working on Rails without using node.
 
 If you like this guide you can [follow me on Twitter](https://twitter.com/coorasse).
