@@ -62,3 +62,10 @@ package 3 40 (1,1) @ (2,0)
 and here is the game running!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Iu2ox7X_0c4" title="CS Robots demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## The next steps
+
+After implementing the game engine, I started thinking how can I re-invent the game, by using the technologies I like? What else can I do which would be funny?
+The plan was simple: bring it to the web! Make it possible to create a room, and let people join the game and challenge each other.
+
+Nothing has happened...until 2025.
