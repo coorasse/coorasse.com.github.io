@@ -11,7 +11,7 @@ This is my new blog / website / place where I dump my thoughts and ideas.
 
 I own this domain since forever, but I never really used it. 
 
-I started publiching on medium.com, but I was quickly annoyed by how bloated it became.
+I started publishing on medium.com, but I was quickly annoyed by how bloated it became.
 
 Looking for alternative, I discovered dev.to, which has been a great place to write for some time, but I was 
 always disappointed by the editor and the User Experience.
