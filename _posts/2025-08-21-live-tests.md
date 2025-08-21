@@ -3,6 +3,7 @@ layout: post
 title: "Live tests in Ruby on Rails"
 date: 2025-08-21
 categories: rails
+mermaid: true
 excerpt: "Did you know you can execute live tests on your Rails apps? 
 In this blog post I will explore the available tools and the small changes we need to introduce live tests in our flow."
 ---
