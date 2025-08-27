@@ -3,6 +3,7 @@ layout: post
 title: "Rails loggers"
 date: 2025-08-25
 categories: rails
+mermaid: true
 excerpt: "Let's try to understand something more about Rails loggers together"
 ---
 
@@ -62,7 +63,7 @@ flowchart TD
     TL -->|Adds| TaggedMethod[.tagged method]
 ```
 
-## Configuration
+## Configuration options
 
 Rails offers different configuration options on every level, and here stuff gets complicated. Let's see them:
 
@@ -127,33 +128,105 @@ end
 # [bb6cae30-6031-4b3e-8384-8352e0cab32e] [2025-08-25T11:27:08Z] here is a test
 ```
 
-```ruby
+## Custom formatter
 
+Let's configure a different formatter:
+
+```ruby
 class OnlylogsFormatter < ActiveSupport::Logger::SimpleFormatter
   def call(severity, time, progname, msg)
     "onlylogs --> #{super} <--\n"
   end
 end
 
-config.logger.formatter = OnlylogsFormatter.new
+config.log_formatter = OnlylogsFormatter.new
+config.log_tags = [:request_id]
+```
 
+and invoke this **in a controller action**:
+
+```ruby
 Rails.logger.info("here is a test")
 ```
 
 Let's make a game. What will the output be between these two?
 
 ```
-[4113f0bd-222a-4917-8dbb-4665ed4df378] [2025-08-25T11:45:19Z] onlylogs --> here is a test <--
+[4113f0bd-222a-4917-8dbb-4665ed4df378] onlylogs --> here is a test <--
 ```
 
 ```
-onlylogs --> [4113f0bd-222a-4917-8dbb-4665ed4df378] [2025-08-25T11:45:19Z] here is a test <--
+onlylogs --> [4113f0bd-222a-4917-8dbb-4665ed4df378] here is a test <--
 ```
 
 <details>
     <summary>Reveal answer</summary>
     <p>The second one. The tags are, in fact, applied to the message <b>before</b> is passed to the formatter.</p>
 </details>
+
+## Custom logger
+
+Let's now configure a different logger:
+
+```ruby
+class OnlylogsLogger < ActiveSupport::Logger
+  def initialize(*args)
+    super
+    self.formatter = OnlylogsFormatter.new
+  end
+end
+
+config.logger = OnlylogsLogger.new
+config.log_tags = [:request_id]
+```
+
+What will the output be now?
+
+```
+[4113f0bd-222a-4917-8dbb-4665ed4df378] onlylogs --> here is a test <--
+```
+
+```
+onlylogs --> [4113f0bd-222a-4917-8dbb-4665ed4df378] here is a test <--
+```
+
+```
+onlylogs --> here is a test <--
+```
+
+<details>
+    <summary>Reveal answer</summary>
+    <p>
+        The last one. The option log_tags is completely ignored when configuring a custom logger.
+    </p>
+    <p>
+        This is true also for the other options: they only apply when a custom logger is not defined. 
+    </p>
+</details>
+
+Stop reading if you haven't answered first :)
+
+Below the relevant code:
+
+```ruby
+# bootstrap.rb
+Rails.logger ||= config.logger || begin
+  logger = if config.log_file_size
+    ActiveSupport::Logger.new(config.default_log_file, 1, config.log_file_size)
+  else
+    ActiveSupport::Logger.new(config.default_log_file)
+  end
+  logger.formatter = config.log_formatter
+  logger = ActiveSupport::TaggedLogging.new(logger)
+  logger
+end
+```
+
+In order to get the log_tags working we need to support tagged logging. For example with:
+
+```ruby
+config.logger = ActiveSupport::TaggedLogging.new(OnlylogsLogger.new)
+```
 
 ## What happens when you install lograge?
 
