@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My source of information"
-date: 2025-09-11
+date: 2025-09-10
 categories: rails
 mermaid: true
 excerpt: "A list of my favourite Newsletters and other sources of information"
