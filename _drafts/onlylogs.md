@@ -12,4 +12,4 @@
 * stream log lines
 * improve javascript performance to reduce the work necessary: batch elaboration of new log lines
 * possible issue: network delay. solution: batch lines in fewer websocket calls
-    
+* let's simulate network delay    
