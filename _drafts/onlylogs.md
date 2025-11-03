@@ -12,4 +12,10 @@
 * stream log lines
 * improve javascript performance to reduce the work necessary: batch elaboration of new log lines
 * possible issue: network delay. solution: batch lines in fewer websocket calls
-* let's simulate network delay    
+* let's simulate network delay
+* security by encrypting file paths and adding an allowed file paths option
+* regexp search
+* performance when displaying 100'000+ rows
+  * optimize backend (batches)
+  * optimize frontend (batches and then clusterize.js)
+  * can probably be further optimized!
