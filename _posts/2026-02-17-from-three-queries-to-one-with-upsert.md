@@ -45,7 +45,7 @@ class DailyStatistic < ApplicationRecord
       {
         date: Time.zone.today,
         resource_id: resource.id,
-        'total' => 1
+        total: 1
       },
       unique_by: %i[date resource_id],
       on_duplicate: Arel.sql("total = daily_statistics.total + 1")
@@ -70,9 +70,17 @@ UPDATE SET total = daily_statistics.total + 1
 If the row doesn't exist, it inserts it with a value of `1`.
 If it does exist (conflict on `date` + `resource_id`), it increments the existing value by `1`.
 
-## The `toral => 1` trick
+The values
 
-This value of `1` is only used when **inserting** a new row.
+```
+{
+date: Time.zone.today,
+resource_id: resource.id,
+total: 1
+}
+```
+
+are only used when **inserting** a new row.
 When a row already exists, the `on_duplicate` clause takes over and increments the existing value instead.
 
 ## Is it still atomic?
