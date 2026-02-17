@@ -3,11 +3,11 @@ layout: post
 title: "From 3 queries to 1 with Rails upsert"
 date: 2026-02-17
 categories: rails
-excerpt: "How I replaced a find_or_create_by + lock + update_columns pattern with a single upsert call, and why it's still atomic"
+excerpt: "How I replaced a find_or_create_by + lock + update_columns pattern with a single upsert call."
 ---
 
 I recently refactored a daily statistics tracking model. The idea is simple: every time a user performs an action (a
-view, a download, a click), we record it. One row per resource per day, with multiple counter columns.
+view, a download, a click), we record it. One row per resource per day.
 
 The old code looked like this:
 
@@ -24,9 +24,7 @@ class DailyStatistic < ApplicationRecord
 end
 ```
 
-This works, but it has performs many queries
-
-For every single tracking event, we perform up to 4 queries:
+This works, but it performs many queries. For every single tracking event, we perform up to 4 queries:
 
 1. `SELECT` - find the existing record
 2. `INSERT` - inserts the record (if needed)
@@ -54,7 +52,7 @@ class DailyStatistic < ApplicationRecord
 end
 ```
 
-One method. One query. No locks. No retries.
+One method. One query. No locks. No retries. No callbacks.
 
 ## The generated SQL
 
@@ -62,12 +60,11 @@ This generates a single SQL statement:
 
 ```sql
 INSERT INTO daily_statistics (date, resource_id, total)
-VALUES ('2026-02-17', 42, 1) ON CONFLICT (date, resource_id)
-DO
-UPDATE SET total = daily_statistics.total + 1
+  VALUES ('2026-02-17', 42, 1) 
+  ON CONFLICT (date, resource_id) DO UPDATE SET total = daily_statistics.total + 1
 ```
 
-If the row doesn't exist, it inserts it with a value of `1`.
+If the row doesn't exist, it inserts it with a default value of `1` for total.
 If it does exist (conflict on `date` + `resource_id`), it increments the existing value by `1`.
 
 The values
@@ -111,4 +108,4 @@ Without this index, PostgreSQL has no way to detect the conflict and the `ON CON
 The old pattern of `find_or_create_by!` + `with_lock` + `update_columns` is something I see often in Rails codebases. 
 It works, but it's more code, more queries, and more things that can go wrong under concurrency.
 
-Rails' `upsert` delegates the hard work to the database, where it belongs. One query, truly atomic, no race conditions.
+Rails `upsert` delegates the hard work to the database, where it belongs: one query, truly atomic, no race conditions.
