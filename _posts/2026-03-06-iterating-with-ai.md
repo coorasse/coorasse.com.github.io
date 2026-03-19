@@ -15,9 +15,9 @@ The solution: automatically compress oversized PDFs and retry, reducing by 10% e
 
 This Blog Post shows my iterations on the problem with Claude and why I don't really understand how can people possibly
 think, in March 2026, that coding is dead.
-I love being assisted by AI in my daily work, but somehow the quality level is not there yet.
+I love being assisted by AI in my daily work, but somehow the quality is not there yet.
 
-But I am sure I just need yet another prmpt, or yet a better CLAUDE.md file.
+But I'm sure I just need yet another prompt, or yet a better CLAUDE.md file.
 
 What follows is a real-world example of iterating with Claude Code to build a feature. The AI produced working code on
 the first attempt, but it took 10+ rounds of feedback to shape it into something I was happy with. Every version of the
@@ -40,7 +40,7 @@ def self.create(pdf_pdf_file_bytes)
 end
 ```
 
-And here it's the first - working - solution from Claude Code
+And here's the first - working - solution from Claude Code
 
 ```ruby
 # `app/models/ibm_document.rb` — v1 (create method)
@@ -125,7 +125,7 @@ more than just compressing the PDF file.
 In particular, it **knew** about the specific error message or the fact that there's a response object: that has nothing
 to do with the task of compressing a PDF.
 
-So here it comes a second version.
+So here comes a second version.
 
 ---
 
@@ -200,11 +200,11 @@ end
 
 We now got a clear separation of concern, but the code became unreadable: it's a huge mess and it's also broken.
 
-Claude failed completely in keeping concerns separated but extracting the right logic in the right place.
+Claude failed completely at keeping concerns separated while extracting the right logic into the right place.
 
 A couple of concrete notes:
 
-* `IbmDocument` is now responsible of looping and compressing further the document. This is exactly what the
+* `IbmDocument` is now responsible for looping and compressing further the document. This is exactly what the
   PdfCompressor should take care of! We had it in version 1 with the method `with_compression_retry` and now it's lost.
   I want the cake, and I want to eat it too!
 * The `IbmDocument` is now looping three times, but if the API errors for a different reason and breaks the loop, it
@@ -331,7 +331,7 @@ end
 ```
 
 As a Software Engineer, I think our job is to call things by their name. That's why `step` in a `progressively_compress`
-method makes no sense. Let's call ti by its name: `progressive_compression_percentage`.
+method makes no sense. Let's call it by its name: `progressive_compression_percentage`.
 
 ---
 
@@ -411,7 +411,7 @@ def self.progressively_compress(pdf_bytes, max_retries: 3, compression_percentag
 end
 ```
 
-And here I realise that talking about `retries` has been misleading for Claude all the times until now.
+And here I realise that talking about `retries` has been misleading for Claude all this time.
 I said "3 retries", but what I meant was "3 attempts". That's why the loop looks so ugly.
 
 ---
@@ -455,7 +455,7 @@ end
 
 This looks like a fantastic implementation. With "just" seven iterations the code looks like I wanted it.
 
-Claude was very bad at naming things and doing a proper sepration of concerns and good architecture, but at least it
+Claude was very bad at naming things and doing a proper separation of concerns and good architecture, but at least it
 gave me the right ghostscript commands to reduce the PDF size, which would have taken me ages to find out.
 
 Also, I let it write tests in the meantime, and they were all green.

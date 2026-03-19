@@ -6,7 +6,7 @@ categories: rails
 excerpt: "Rails counter_cache are great but they serve one purpose, and you should always remember that they are cached values"
 ---
 
-I recently discussed on the implementation and use of counter cache. The case is simple and usual:
+I recently discussed the implementation and use of counter cache. The case is simple and usual:
 
 ```ruby
 class Deal
@@ -50,7 +50,7 @@ But we should always be aware that this is a "cache", and if you programmed for 
 
 > CACHE = BUGS
 
-So what if your coupons are a limited resource? What if there are money attached to those coupons? Do you still want to rely on a cached value?
+So what if your coupons are a limited resource? What if there is money attached to those coupons? Do you still want to rely on a cached value?
 The answer is **NO**.
 
 Given the following code:
@@ -118,7 +118,7 @@ and you can use:
 Now, this solution has the advantage to always use the real count. 
 There's no cache involved and therefore the value is guaranteed to always be the real count.
 
-The disadvantage is, of course, the additional query, which might more expensive and you need a bit more code.
+The disadvantage is, of course, the additional query, which might be more expensive and you need a bit more code.
 
 Next time you need to solve an N+1 problem, you might consider one of these two options.
  

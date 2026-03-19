@@ -40,12 +40,11 @@ affects boys and is unilateral in 95% of cases. It is unrelated to trauma.
 I don't trust AI blindly, and I recommend against doing so. A model works with the information you provide and
 the patterns it has learned. It doesn't perform a physical examination and it has no clinical experience.
 But it gave me a clear direction and helped me prepare a series of questions for the doctors the next day.
-Because of what I just said, the Claude response was suspicious: since it's a rare disease, the probability of this 
-diagnosis are very low, but at the same time the fact that Claude made it, so this made it immediately more probable to be
-right.
+Because of what I just said, the Claude response was suspicious: since it's a rare disease, the probability of this
+diagnosis is very low, but at the same time, the fact that Claude identified it made it immediately more probable to be
+correct.
 
-The next days, after another four hours of checks, the doctors confirmed the diagnosis: I did not mention anything about
-my findings.
+The next day, after another four hours of checks, the doctors confirmed the diagnosis: I did not mention my findings.
 The questions Claude had prepared helped me have a more productive
 conversation with the medical team, even though I was still processing the news.
 

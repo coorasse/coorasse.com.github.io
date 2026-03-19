@@ -6,7 +6,7 @@ categories: rails
 excerpt: "Follow me through a simple code review and refactoring. This real-world example will give you also an idea of the importance of code reviews at Renuo."
 ---
 
-I recently found my self reviewing the following Rails code and I want to show how this code can be refactored to be more elegant:
+I recently found myself reviewing the following Rails code and I want to show how this code can be refactored to be more elegant:
 
 {% highlight ruby %}
 
@@ -37,12 +37,12 @@ The following code is mixing presentation and business logic. Can you spot why?
 (amount.to_f / initial_quantity.to_f * 100.0).floor.to_s + "%"
 {% endhighlight %}
 
-The first reason is that incorporates a `+ "%"` that is responsibility of the view layer. How to show a percentage, should be a responsibility of the
+The first reason is that it incorporates a `+ "%"` that is responsibility of the view layer. How to show a percentage, should be a responsibility of the
 view, not of the model.
 
 Rails provides an helper method for that called [
 `number_to_percentage`](https://api.rubyonrails.org/classes/ActiveSupport/NumberHelper.html#method-i-number_to_percentage)
-which should be used to convert a number in the desired format on the view layer.
+which should be used to convert a number to the desired format on the view layer.
 
 The code can therefore be refactored as follows:
 {% highlight ruby %}
@@ -60,7 +60,7 @@ end
 
 {% endhighlight %}
 
-We can now manipualte how the number is presented using `number_to_percentage`options.
+We can now manipulate how the number is presented using `number_to_percentage`options.
 
 Let's look more closely to the method now, and let's have a look at the call to [
 `.floor`](https://ruby-doc.org/core-2.6.7/Float.html#method-i-floor).
@@ -68,7 +68,7 @@ Let's look more closely to the method now, and let's have a look at the call to 
 We want to **represent** the percentage with the largest integer lower or equal to our float. This is again part of the
 presentation layer.
 
-A `Deal` should return us the percentage value: the fact that we represent it as an integer, it's again a responsibility
+A `Deal` should return us the percentage value: the fact that we represent it as an integer is again a responsibility
 of the view layer.
 
 {% highlight erb %}
@@ -164,7 +164,7 @@ When we read or view code it is now immediately clear what information we are di
 
 Also, the small renaming of `percentage_of_quantity` into `percentage_of_initial_quantity` removes confusion from future readers: "the `Deal` has an `initial_quantity`, what is now `quantity`"?
 
-This small details are very important for future readers.
+These small details are very important for future readers.
 
 <hr>
 

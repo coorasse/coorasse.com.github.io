@@ -161,7 +161,7 @@ onlylogs --> [4113f0bd-222a-4917-8dbb-4665ed4df378] here is a test <--
 
 <details>
     <summary>Reveal answer</summary>
-    <p>The second one. The tags are, in fact, applied to the message <b>before</b> is passed to the formatter.</p>
+    <p>The second one. The tags are, in fact, applied to the message <b>before</b> it is passed to the formatter.</p>
 </details>
 
 ## Custom logger
@@ -230,7 +230,7 @@ config.logger = ActiveSupport::TaggedLogging.new(OnlylogsLogger.new)
 
 ## What happens when you install lograge?
 
-What is important to understand here, is that [`lograge`](https://github.com/roidrage/lograge) does change the
+What is important to understand here, is that [`lograge`](https://github.com/roidrage/lograge) does not change the
 logger or the formatter, but changes how logs are written, because it needs to basically collect multiple log messages
 and merge them into one. Still, it uses your defined configuration
 

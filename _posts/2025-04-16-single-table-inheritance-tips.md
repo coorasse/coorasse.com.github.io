@@ -7,7 +7,7 @@ excerpt: "Two small tricks I recently discovered when working with STI"
 ---
 
 Single Table Inheritance is great.
-Possible because even if I don't work Java since at least 14 years, I still love inheritance in OOP.
+Possibly because even if I haven't worked with Java for at least 14 years, I still love inheritance in OOP.
 
 I recently played around with STI in Rails and want to share a couple of small tricks:
 

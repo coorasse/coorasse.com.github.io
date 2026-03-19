@@ -13,7 +13,7 @@ I own this domain since forever, but I never really used it.
 
 I started publishing on medium.com, but I was quickly annoyed by how bloated it became.
 
-Looking for alternative, I discovered dev.to, which has been a great place to write for some time, but I was 
+Looking for alternatives, I discovered dev.to, which has been a great place to write for some time, but I was 
 always disappointed by the editor and the User Experience.
 
 So here is my new blog, and these were my constraints:
@@ -26,7 +26,7 @@ I therefore decided to use Jekyll, because of the incredible simplicity it provi
 I know there's way more modern tools out there, but I simply don't need them: I don't want to include React components, 
 or do more complex things, so Jekyll is just enough.
 
-Also, be able to work with ruby is a big plus for me, and I can use my existing knowledge to extend it if needed.
+Also, being able to work with Ruby is a big plus for me, and I can use my existing knowledge to extend it if needed.
 
 I also did not want to build from Sass, so I went with SimpleCSS, which is a very simple CSS framework that does not require any build step.
 If you like my template, you can find it on [github](https://github.com/coorasse/jekyll-simplecss).

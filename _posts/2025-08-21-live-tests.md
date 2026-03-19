@@ -54,8 +54,8 @@ So basically good, old, smoke tests.
 
 But what if we could automate those as well? Let's introduce live tests!
 
-Live tests are nothing more than standard system tests that connect to a remove, running, server.
-This all built-in in Rails and with some small changes, we can have them up and running in no time.
+Live tests are nothing more than standard system tests that connect to a remote, running, server.
+This is all built-in in Rails and with some small changes, we can have them up and running in no time.
 
 ```ruby
 require "test_helper"

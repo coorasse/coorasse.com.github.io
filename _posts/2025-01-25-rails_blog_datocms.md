@@ -248,7 +248,7 @@ We have the following concepts:
 * controller: responsible for choosing a query and using it to renderer a component
 * component: responsible for the view logic.
 
-DatoCMS offers a preview mode. You are responsible of deciding how and when a preview is displayed, this can be enabled for specific users of your application, or with a secret token in the URL. In our example we will use the preview parameter of the URL.
+DatoCMS offers a preview mode. You are responsible for deciding how and when a preview is displayed, this can be enabled for specific users of your application, or with a secret token in the URL. In our example we will use the preview parameter of the URL.
 
 You can change the BlogPostsController as follows:
 
