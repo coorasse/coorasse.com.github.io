@@ -8,7 +8,7 @@ list_title: Last posts
 
 <div>
   <div style="float:right;width:30%;margin-inline-start: 15px;padding: 0 15px;">
-    <img src="/assets/avatar.png">
+    <img src="/assets/homepage.png">
   </div>
   <div>
     <p>
