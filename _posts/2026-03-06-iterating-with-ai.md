@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Iterating with AI: How a PDF compression feature evolved through 9 revisions"
+title: "Iterating with AI: How a PDF compression feature evolved through 8 revisions"
 date: 2026-03-06
 categories: ai
-excerpt: "A real-world example of building a feature with Claude Code. The AI produced working code on the first attempt, but it took 9 rounds of feedback to shape it into something I was happy with."
+excerpt: "A real-world example of building a feature with Claude Code. The AI produced working code on the first attempt, but it took 8 rounds of feedback to shape it into something I was happy with."
 ---
 
 ## The Problem
@@ -490,7 +490,7 @@ over and tell Claude how to do it.
 
 ---
 
-## Version 9 (Final): Multi-pass Ghostscript until target is reached
+## Version 8 (Final): Multi-pass Ghostscript until target is reached
 
 **My feedback:** *"The approach using ghostscript is ok, but the PdfCompressor should take care of invoking ghostscript
 multiple times until the desired compression is reached."*
